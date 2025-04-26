@@ -6,25 +6,17 @@ Este é um sistema de linha de comando desenvolvido em C# (.NET 8), cujo objetiv
 - Agendamento, alteração e cancelamento de consultas
 - Listagem de consultas e geração de relatórios diários
 
-## 🛠 Versão utilizada
+## 🛠 Versões utilizadas
+- **Visual Studio:** 2022
 - **.NET:** 8.0
 
-## 📦 Estrutura de Arquivos
+## ▶️ Como Executar:
 
-
-## ▶️ Como Executar no Visual Studio
-
-1. **Abra o Visual Studio.**
-2. Vá em **"Arquivo" > "Novo" > "Projeto"**.
-3. Escolha o template **"Aplicativo de Console (.NET Core ou .NET 8)"**.
-4. Dê um nome ao projeto e clique em **"Criar"**.
-5. Substitua os arquivos gerados (`Program.cs`) pelos arquivos fornecidos:
-   - `Program.cs`
-   - `Paciente.cs`
-   - `Medico.cs`
-   - `Consulta.cs`
-6. **Certifique-se que o namespace seja o mesmo em todos os arquivos (`CP2`)**.
-7. Pressione **F5** ou clique em **"Iniciar"** para executar o sistema.
+1. Abra o Visual Studio 2022.
+2. Clique na opção **Clone a Repository**.
+3. No campo **Repository Location**, digite a seguinte URL: `https://github.com/LM2124/CP2_Lorenzo_Gabriel_Victor_Lucas_Henri-Csharp`
+4. Clique no botão **Clone** e espere o projeto abrir.
+5. Pressione **F5** ou clique em **Start** para executar o sistema.
 
 ## 👥 Integrantes do Grupo
 - RM 99389 - Victor Flávio Demarchi Viana
@@ -35,7 +27,10 @@ Este é um sistema de linha de comando desenvolvido em C# (.NET 8), cujo objetiv
 
 ## 💡 Funcionalidades em Destaque
 
-- Interface de texto simples com menus navegáveis
-- Cadastro e gerenciamento de pacientes, médicos e consultas
-- Geração de relatório diário com cálculo de intervalos entre consultas
-- Projeto orientado a objetos com uso de `Guid`, `DateOnly`, `TimeOnly` e listas genéricas
+- `CadastrarPaciente()` Responsável por adicionar um novo paciente a lista de pacientes, ao fornecer o nome, CPF e data de nascimento
+- `CadastrarMedico()` Responsável por adicionar um novo médico a lista de médicos, ao fornecer o nome, CRM e especialidade.
+- `SelecionarEmLista()` Coleta uma das listas (pacientes ou médicos) e cria um prompt para seleção dos mesmos
+- `AgendarConsulta()` Através do **SelecionarLista()**, coleta o médico e o paciente, juntamente com a data e hora da consulta, e marca a consulta do paciente selecionado na lista do médico.
+- `ListarConsultas()` Verifica todas as consultas presentes nos médicos registrados, retornando data, hora, médico responsável, paciente e hora de registro da consulta
+- `AlterarConsultas()` Através do **SelecionarLista()**, coleta as consultas disponíveis e permite alterar a data ou hora, cancelar a consulta, ou cancelar a operação e voltar ao menu
+- `GerarRelatorio()` Indica se há consultas marcadas para o dia de hoje, e caso hajam, listam nome do paciente, nome do médico e horário da consulta, e o intervalo de tempo médio entre as consultas de hoje. 
